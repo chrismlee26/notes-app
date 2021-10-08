@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
   </head>
   <body>
-    <nav class="navbar">
-      <div id="navbar">
+    <main>
+      
+      <nav class="navbar">
         <div class="navbar-nav">
-          <a 
-          class="nav-item nav-link" 
-          id="signup"
-          href="/signup"
-          >Signup</a>
-          <a class="nav-item nav-link" id="logout" href="/login">Login</a>
-          <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
-          <a class="nav-item nav-link" id="home" href="/home">Home</a>
+          <h1 class="logo">Noteynotes</h1>
+          <a id="home" href="/home">Home</a>
+          <a id="logout" href="/login">Login</a>
+          <a id="logout" href="/logout">Logout</a>
+          <a id="signup" href="/signup">Signup</a>
+          <div class="upper__block"></div>
         </div>
+      </nav>
+      <div class="container">
+        {% block content%}
+        {% endblock %}
       </div>
-    </nav>
-
-    <script
-    ></script>
+    </main> 
   </body>
 </html>

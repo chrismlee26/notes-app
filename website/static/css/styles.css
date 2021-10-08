@@ -12,6 +12,20 @@
 html {
   background-color: var(--main-color);
   color: var(--font-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Wtf this doesn't work */
+main {
+  width: 900px;
+  margin: auto;
+}
+
+p {
+  color: white;
+  font-size: 18px;
+  font-family: var(--font-paragraph);
 }
 
 a {
@@ -20,7 +34,37 @@ a {
   font-weight: bold;
 }
 
+/* Navbar */
 .navbar {
   top: 2%;
-  position: fixed;
+  margin: auto;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.navbar > .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbar > .navbar-nav > a {
+  margin-top: 0.5%;
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  color: silver;
+  padding: 1em 1.5em;
+  border: 1px solid var(--main-color);
+  border-radius: 10%;
+  display: flex;
+}
+
+.navbar > .navbar-nav > a:active,
+.navbar > .navbar-nav > a:hover {
+  color: white;
+  background-color: var(--fun-color);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
