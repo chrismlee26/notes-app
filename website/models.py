@@ -18,9 +18,15 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(150))
     nickname = db.Column(db.String(150))
     recipe = db.relationship('Recipe')
+    favorites = db.relationship('Favorites')
 
 
 class Cuisines(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     type = db.Column(db.String(1000))
+    recipe_id = db.Column(db.Integer, db.ForeignKey('recipe.id'))
+
+
+class Favorites(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
     recipe_id = db.Column(db.Integer, db.ForeignKey('recipe.id'))

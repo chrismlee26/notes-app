@@ -1,6 +1,8 @@
 from flask import Flask
+from flask.signals import appcontext_popped
 from flask_sqlalchemy import SQLAlchemy
 from os import path
+from flask_login import LoginManager
 
 db = SQLAlchemy()
 DB_NAME = "database.db"
@@ -22,6 +24,16 @@ def create_app():
     from .models import User, Recipe
 
     create_database(app)
+
+    # Check login
+    login_manager = LoginManager()
+    login_manager.login_view = 'auth.login'
+    login_manager.init_app(app)
+
+    # Check for primary key
+    @login_manager.user_loader
+    def load_user(id):
+        return User.query.get(int(id))
 
     return app
 

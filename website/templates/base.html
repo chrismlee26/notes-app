@@ -11,12 +11,16 @@
     <main>
       <nav class="navbar">
         <div class="navbar-nav">
-          <h1 class="logo">RecipesList</h1>
-          <a id="home" href="/">Home</a>
-          <a id="logout" href="/login">Login</a>
-          <a id="logout" href="/logout">Logout</a>
-          <a id="signup" href="/signup">Signup</a>
           <div class="upper__block"></div>
+          <h1 class="logo">RecipesList</h1>
+          {% if user.is_authenticated %}
+          <a id="home" href="/">Home</a>
+          <a id="logout" href="/logout">Logout</a>
+          {% else %}
+          <a id="login" href="/login">Login</a>
+          <a id="signup" href="/signup">Signup</a>
+          {% endif %}
+          
         </div>
       </nav>
 
@@ -48,5 +52,10 @@
         {% endblock %}
       </div>
     </main> 
+    <script
+      type="text/javascript"
+      href="{{ url_for('static', filename='index.js') }}"
+    >
+    </script>
   </body>
 </html>

@@ -2,4 +2,33 @@
 
 {% block content %}
   <h1>home page content goes here wow</h1>
+  </br>
+  <div>
+    <h1>Recipes</h1>
+    <div>
+      <ul class="recipes" id="recipes">
+        {% for recipe in user.recipe %}
+          <li>{{ recipe.data }}
+            <button type="button" class="close" onClick="deleteRecipe({{ recipe.id }})">
+              <!-- <span aria-hidden="true">&times;</span> -->
+              <span>x</span>
+            </button>
+            <button type="button" class="close" onClick="favoriteRecipe({{ recipe.id }})">
+              <!-- <span aria-hidden="true">&times;</span> -->
+              <span>muh favs</span>
+            </button>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+
+  <form method="POST">
+    <textarea name="recipe" id="recipe"></textarea>
+    </br>
+      <div>    
+          <button type="submit">submit recipe</button>
+      </div>
+  </form>
 {% endblock %}
