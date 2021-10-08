@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title%}Home{% endblock %}
+
+{% block content %}
+  <form method="POST">
+    <h2 class="form__subheading">SIGNUP</h2>
+    <div class="form__group">
+      <label for="email"><p>Email</p></label>
+      <input type="email" class="form_email" id="email" name ="email" placeholder="Enter email...">
+    </div>
+    <div class="form__group">
+      <label for="firstname"><p>Name</p></label>
+      <input type="text" class="form_firstname" id="firstname" name ="firstname" placeholder="Enter first name...">
+    </div>
+    <div class="form__group">
+      <label for="password1"><p>Password</p></label>
+      <input type="password" class="form_password1" id="password1" name ="password1" placeholder="Enter password...">
+    </div>
+    <div class="form__group">
+      <label for="password2"><p>Password (Confirm)</p></label>
+      <input type="password" class="form_password2" id="password2" name ="password2" placeholder="Re-enter password...">
+    </div>
+    <br />
+    <button class="form__submit" type="submit">Press me bb</button>
+  </form>
+{% endblock %}

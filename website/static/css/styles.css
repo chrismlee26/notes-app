@@ -4,9 +4,11 @@
   --main-color: #111;
   --font-color: #fff;
   --fun-color: rgba(88, 80, 236);
+  --lightest-color: #999;
   --font-header: "Playfair Display", serif;
   --font-subheader: "Oswald", sans-serif;
   --font-paragraph: "Inter", sans-serif;
+  --font-forms: Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -16,10 +18,26 @@ html {
   padding: 0;
 }
 
-/* Wtf this doesn't work */
 main {
   width: 900px;
   margin: auto;
+}
+
+/* Typography */
+h1 {
+  font-family: var(--font-header);
+  font-size: 1.8em;
+}
+
+h2 {
+  font-family: var(--font-subheader);
+  font-size: 1.4em;
+}
+
+h3 {
+  font-family: var(--font-paragraph);
+  font-size: 1.2em;
+  color: var(--lightest-color);
 }
 
 p {
@@ -67,4 +85,57 @@ a {
   background-color: var(--fun-color);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+}
+
+/* Forms */
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__subheading {
+  color: var(--lightest-color);
+}
+
+.form__group > label {
+  margin-bottom: -1.5%;
+  padding-left: 0.5%;
+}
+
+input,
+textarea {
+  color: var(--font-color);
+  background-color: var(--main-color);
+  border: 2px solid var(--fun-color);
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  font-family: var(--font-forms);
+  font-size: 15px;
+}
+
+form > label > textarea {
+  padding: 1em;
+  border-radius: 10px;
+}
+
+/* Buttons */
+button {
+  background-color: var(--fun-color);
+  color: var(--fg-color);
+  border: 2px solid var(--fun-color);
+  border-radius: 10px;
+  padding: 0.5em;
+  font-weight: 400;
+  font-size: larger;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-primary2);
+  cursor: pointer;
+}
+
+.form__submit {
+  margin-top: 3em;
 }
