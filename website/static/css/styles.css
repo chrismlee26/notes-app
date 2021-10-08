@@ -42,7 +42,7 @@ h3 {
 
 p {
   color: white;
-  font-size: 18px;
+  font-size: 14px;
   font-family: var(--font-paragraph);
 }
 
@@ -55,7 +55,6 @@ a {
 /* Navbar */
 .navbar {
   top: 2%;
-  margin: auto;
 }
 
 .logo {
@@ -64,7 +63,6 @@ a {
 
 .navbar > .navbar-nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -73,10 +71,9 @@ a {
   font-family: "Oswald", sans-serif;
   text-decoration: none;
   color: silver;
-  padding: 1em 1.5em;
+  padding: 15px;
   border: 1px solid var(--main-color);
-  border-radius: 10%;
-  display: flex;
+  border-radius: 10px;
 }
 
 .navbar > .navbar-nav > a:active,
@@ -94,12 +91,14 @@ a {
 }
 
 .form__subheading {
-  color: var(--lightest-color);
+  /* color: var(--lightest-color); */
 }
 
 .form__group > label {
-  margin-bottom: -1.5%;
+  margin-bottom: -1%;
+  margin-top: 1%;
   padding-left: 0.5%;
+  color: var(--lightest-color);
 }
 
 input,
@@ -129,6 +128,7 @@ button {
   font-weight: 400;
   font-size: larger;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 button:hover {
