@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a96bc3cbccef15aaa13ec4b4ead1d75c8c54f3ff9e6cd138d3481b30bebcf203"
+            "sha256": "b83b368e05cd07a35de76eef397ba8cbf8499e9e924d74b98833eb872039db42"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.9.7"
+            "python_version": "3.8"
         },
         "sources": [
             {
@@ -15,7 +15,16 @@
             }
         ]
     },
-    "default": {},
+    "default": {
+        "gunicorn": {
+            "hashes": [
+                "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e",
+                "sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8"
+            ],
+            "index": "pypi",
+            "version": "==20.1.0"
+        }
+    },
     "develop": {
         "autopep8": {
             "hashes": [
