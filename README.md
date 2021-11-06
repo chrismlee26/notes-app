@@ -6,9 +6,11 @@
 
 # Run
 
-`source env/bin/activate` to activate virtual environment
-`python3 main.py` to run application
-`localhost:5000` in browser
+0. `pip3 install -r requirements.txt` to install dependencies
+1. `source env/bin/activate` to activate virtual environment
+2. `python3 main.py` to run application
+3. `localhost:5000` in browser
+4. `dectivate` to deactivate virtual environment
 
 # ERD Document
 
