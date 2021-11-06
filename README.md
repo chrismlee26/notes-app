@@ -4,6 +4,12 @@
 
 - Logic in Python, Database in SQLAlchemy, Templating in Flask, Rendered in Jinja2
 
+# Run
+
+`source env/bin/activate` to activate virtual environment
+`python3 main.py` to run application
+`localhost:5000` in browser
+
 # ERD Document
 
-![ERD Doc](./app/static/recipe-list-erd.png)
+![ERD Doc](./website/static/recipe-list-erd.png)
